@@ -1,9 +1,7 @@
 import React from "react";
-import { Container, Grid, Typography } from "@mui/material";
+import { Button, Container, Grid, MenuItem, Typography } from "@mui/material";
 import ProductCard from "../ProductCard";
 import { useRouter } from "next/router";
-import { setup } from "@/config/setup";
-import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 export default function HomeCategoryList({ categoryAndProduct }: any) {
   const router = useRouter();
   return (
@@ -28,17 +26,18 @@ export default function HomeCategoryList({ categoryAndProduct }: any) {
         >
           {categoryAndProduct.categoryName.toUpperCase()}
         </Typography>
-        <Typography
+        <Button
           sx={{
             cursor: "pointer",
-            display: "flex"
+            color: "black",
+            paddingRight: "0rem"
           }}
           onClick={() => {
             router.push(`/customer/search?categoryId=${categoryAndProduct.categoryId}`);
           }}
         >
-          xem thêm<TrendingFlatIcon/>
-        </Typography>
+          xem thêm
+        </Button>
       </div>
         <Grid container spacing={2}>
           <Grid item xs={3}>

@@ -28,6 +28,9 @@ export default function Cart() {
   const [agree, setAgree] = useState<any>(false);
   const [openConfirmPopup, setOpenConfirmPopup] = useState<any>(false);
   const [cartItemDelete, setCartItemDelete] = useState<any>(0);
+  const formatNumber = (number: number) => {
+    return number.toLocaleString('en-US')
+  }
   useEffect(() => {
     const deleteCartItem = async () => {
       const response = await deleteCartItemApi(cartItemDelete);
@@ -59,8 +62,22 @@ export default function Cart() {
     setOpenConfirmPopup(true);
   };
   useEffect(() => {
-
-  }, [cart])
+    if (cart !== null) {
+      // console.log(orderList)
+      // console.log(cart)
+      const totalCartItem = cart.productAndCartItemList.filter((cartItem: any) => 
+        orderList.includes(cartItem.cartItemId)
+      )
+      console.log(totalCartItem)
+      let total = 0
+      for (let index = 0; index < totalCartItem.length; index++) {
+        const element = totalCartItem[index];
+        total = total + element.quantity * element.product.price
+        console.log(total)
+      }
+      setTotal(total)
+    }
+  }, [orderList, cart])
   return (
     <CustomerLayout>
       <div
@@ -102,10 +119,10 @@ export default function Cart() {
                 onChange={(event) => {
                   console.log(event.target.checked);
                   if (event.target.checked) {
-                    setOrderList([...orderList, row]);
+                    setOrderList([...orderList, row.cartItemId]);
                   } else {
-                    // const newOrderList = orderList.filter((cartItems : any) => key !== cartItems)
-                    // setOrderList(newOrderList)
+                    const newOrderList = orderList.filter((cartItemId: any) => row.cartItemId !== cartItemId)
+                    setOrderList(newOrderList)
                   }
                 }}
               />
@@ -128,10 +145,9 @@ export default function Cart() {
               <div
                 style={{
                   paddingRight: "3rem",
-                  paddingTop: "1rem",
                 }}
               >
-                <ChangeQuatityButton cartItem={row} />
+                <ChangeQuatityButton cartItem={row} productQuantity={row.product.quantity} />
                 <Typography
                   variant="subtitle1"
                   sx={{
@@ -142,10 +158,13 @@ export default function Cart() {
                 </Typography>
               </div>
               <div>
-                <Typography variant="h6">
-                  total: {row.product.price * row.quantity} VND
+                <Typography variant="h6" sx={{
+                  display: "flex",
+                  alignItems: "flex-end"
+                }}>
+                  total: {formatNumber(row.product.price * row.quantity)} VND
                 </Typography>
-                <Typography variant="subtitle1">
+                <Typography variant="subtitle2">
                   {row.quantity}x{row.product.price}
                 </Typography>
               </div>
@@ -155,6 +174,9 @@ export default function Cart() {
                 onClick={() => {
                   handleDelete();
                   setCartItemDelete(row.cartItemId);
+                }}
+                sx={{
+                  margin: "1rem"
                 }}
               >
                 Xoá
@@ -170,14 +192,14 @@ export default function Cart() {
           sx={{
             marginTop: "2rem",
             height: "4rem",
-            padding: "1rem 2rem 1rem",
+            padding: "1rem 2.5rem 1rem",
           }}
         >
           <Toolbar>
             <div></div>
             <Box sx={{ flexGrow: 1 }} />
             <Typography variant="h6">
-              Tổng tiền thanh toán:{" "}
+              Tổng tiền thanh toán:{ }
               <span style={{ marginLeft: "1rem", marginRight: "5rem" }}>
                 {total} VND
               </span>
