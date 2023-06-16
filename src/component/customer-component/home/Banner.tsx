@@ -6,7 +6,7 @@ export default function Banner({ children }: any) {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex: any) => (prevIndex + 1) % slider.length);
-    }, 5000);
+    }, 10000);
     return () => {
       clearInterval(interval);
     };
