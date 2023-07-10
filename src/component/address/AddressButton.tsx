@@ -78,7 +78,7 @@ export default function AddressButton({ handleAddAddress }: any) {
                     }}
                     variant="contained"
                 >
-                    New Address
+                    Thêm địa chỉ mới
                 </StyledButton>
             </FlexBox>
         </>

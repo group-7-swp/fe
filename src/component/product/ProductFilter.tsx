@@ -22,7 +22,7 @@ export default function ProductFilter() {
             fontWeight: "500",
           }}
         >
-          Category
+          Phân loại
         </Typography>
         {categoryList.map((item: any, key: any) => (
           <FormControlLabel
@@ -51,7 +51,7 @@ export default function ProductFilter() {
             fontWeight: "500",
           }}
         >
-          Price
+          Giá
         </Typography>
         {categoryList.map((item: any, key: any) => (
           <FormControlLabel

@@ -34,7 +34,7 @@ export default function ProductCard({product}: Props) {
       dispatch(
         setOpen({
           open: true,
-          message: "You must login to buy",
+          message: "Hãy đăng nhập để tiếp tục mua sắm",
           severity: "error",
         })
       );

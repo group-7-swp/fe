@@ -6,8 +6,9 @@ export const setup = {
   banner: "/assets/images/banner.jpg",
   error: "rgb(211, 47, 47)",
   success: "rgb(46, 125, 50)",
-  email: "cskg.tiemhommie@gmail.com",
-  backgroundColor:  "#F6F9FC"
+  email: "cskh.tiemhommie@gmail.com",
+  backgroundColor:  "#F6F9FC",
+  address: "46/37C Nhiêu Tứ, Phường 07, Quận Phú Nhuận, Hồ Chí Minh"
 };
 export const categoryList = [
   {

@@ -26,7 +26,7 @@ export default function NavLeft() {
                         fontWeight: "700"
                     }}
                 >
-                    Dashboard
+                    Thiết lập tài khoản
                 </Typography>
                 <StyledLink href={`/order/${auth.currentUser?.uid}`}>
                     <MenuItem sx={{
@@ -39,7 +39,7 @@ export default function NavLeft() {
                                 color: setup.inside
                             }}
                         />
-                        Order
+                        Đơn hàng
                     </MenuItem>
                 </StyledLink>
                 <StyledLink href={`/profile/${auth.currentUser?.uid}`}>
@@ -54,7 +54,7 @@ export default function NavLeft() {
                                 color: setup.inside
                             }}
                         />
-                        Profile
+                        Hồ sơ của tôi
                     </MenuItem>
                 </StyledLink>
             </Paper>
@@ -82,7 +82,7 @@ export default function NavLeft() {
                             fontWeight: "700"
                         }}
                     >
-                        Log out
+                        Đăng xuất
                     </Typography>
                 </FlexBox>
             </Paper>

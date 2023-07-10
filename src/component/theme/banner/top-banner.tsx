@@ -18,7 +18,7 @@ export default function TopBanner({ children, slider }: any) {
         alt="green iguana"
         image={`/assets/images/${slider[index]}`}
         sx={{
-          height: "45rem",
+          height: "45.5rem",
           paddingTop: "9rem",
           backgroundColor: setup.backgroundColor
           // objectFit: "contain"

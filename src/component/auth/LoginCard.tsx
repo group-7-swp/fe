@@ -34,14 +34,14 @@ export default function LoginCard() {
         auth: auth
       });
       dispatch(setOpen({
-        message: data.message,
+        message: "Đăng nhập thành công",
         open: true,
         severity: data.status
       }))
       data.data !== null ? router.push("/") : router.push("/information")
     } catch (error: any) {
       dispatch(setOpen({
-        message: error.message,
+        message: "Đăng nhập thất bại",
         open: true,
         severity: "error"
       }))
@@ -58,7 +58,7 @@ export default function LoginCard() {
         router.push("/information")
       } else {
         dispatch(setOpen({
-          message: data.message,
+          message: "Đăng nhập thành công",
           open: true,
           severity: data.status
         }))
@@ -66,7 +66,7 @@ export default function LoginCard() {
       }
     } catch (error: any) {
       dispatch(setOpen({
-        message: error.message,
+        message: "Đăng nhập thất bại",
         open: true,
         severity: "error"
       }))
@@ -80,7 +80,7 @@ export default function LoginCard() {
         label="Email"
         id="input-login"
         error={errors.email !== undefined}
-        helperText={errors.email !== undefined ? "bắt buộc" : ""}
+        helperText={errors.email !== undefined ? "Bắt buộc" : ""}
         // icon={<EmailIcon />}
         {...register("email", {
           required: true,
@@ -88,10 +88,10 @@ export default function LoginCard() {
       />
       <br />
       <StyledOutlinedInput
-        label="Password"
+        label="Mật khẩu"
         id="input-login"
         error={errors.password !== undefined}
-        helperText={errors.password !== undefined ? "bắt buộc" : ""}
+        helperText={errors.password !== undefined ? "Bắt buộc" : ""}
         {...register("password", {
           required: true,
         })}
@@ -123,7 +123,7 @@ export default function LoginCard() {
           }}
           href="/register"
         >
-          đăng kí
+          Đăng kí
         </StyledLink>
       </Typography>
       <LineText text="Or" />

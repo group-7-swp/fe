@@ -50,7 +50,7 @@ export default function RegisterCard() {
       setOpenLoading(true)
       await createUserWithEmailAndPassword(auth, fields.email, fields.password)
       dispatch(setOpen({
-        message: "Success, Create success",
+        message: "Đăng ký thành công",
         open: true,
         severity: "success"
       }))
@@ -71,15 +71,15 @@ export default function RegisterCard() {
         id="login"
         label="Email"
         error={errors.email !== undefined}
-        helperText={errors.email !== undefined ? "bắt buộc" : ""}
+        helperText={errors.email !== undefined ? "Bắt buộc" : ""}
         {...register("email", {
           required: true
         })}
       />
       <StyledOutlinedInput
-        label="Password"
+        label="Mật khẩu"
         error={errors.password !== undefined}
-        helperText={errors.password !== undefined ? "bắt buộc ít nhất 6 kí tự" : ""}
+        helperText={errors.password !== undefined ? "Bắt buộc ít nhất 6 kí tự" : ""}
         id="2"
         {...register("password", {
           required: true,
@@ -111,7 +111,7 @@ export default function RegisterCard() {
           }}
           href="/login"
         >
-          đăng nhập
+          Đăng nhập
         </StyledLink>
       </Typography>
       <LineText text="Or" />
