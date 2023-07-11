@@ -8,7 +8,6 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import { useRouter } from "next/router";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import Link from "next/link";
 export default function Footer() {
   const router = useRouter();
@@ -16,7 +15,7 @@ export default function Footer() {
     <div
       style={{
         backgroundColor: setup.border,
-        paddingTop: "3.5rem",
+        paddingTop: "3rem",
         paddingBottom: "3.5rem",
       }}
     >
@@ -42,9 +41,9 @@ export default function Footer() {
       >
         <Grid container spacing={5} sx={{ marginLeft : '1px' }}>
           <Grid item xs={3.5} sx={{ marginLeft: '-5%', marginRight: '5%' }}>
-            <Typography
+            <Typography 
             >
-              <img style={{ width: '20rem', height: '100%', top: '0' }} src="assets/images/logo-white.png" alt="" />
+              <img style={{ width: '20rem', height: '100%' }} src="assets/images/logo-white.png" alt="" />
             </Typography>
             <Typography variant="body2" sx={{ display: 'flex' }}>
               <LocationOnIcon sx={{ marginTop: '3%' }} />
@@ -55,7 +54,7 @@ export default function Footer() {
               123 456789
             </Typography>
             <Typography sx={{ display: 'flex' }}>
-              <HeadsetMicOutlinedIcon />
+              <EmailIcon />
               {setup.email}
             </Typography>
           </Grid>
@@ -98,9 +97,9 @@ export default function Footer() {
             >
               THEO DÕI HOMMIE TẠI
             </Typography>
-            <YouTubeIcon sx={{ marginLeft: '2%' }} />
-            <FacebookIcon sx={{ marginLeft: '0.5rem' }} />
-            <InstagramIcon sx={{ marginLeft: '0.5rem' }} />
+            <YouTubeIcon sx={{ marginLeft: '4rem', color : 'red', marginBottom : '2.5px' }} />
+            <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="" style={{ width : '28px' }} />
+            <FacebookIcon sx={{ marginLeft: '0.5rem', color : 'blue', marginBottom : '1.8px' }} />
             <Typography
               variant="h6"
               sx={{

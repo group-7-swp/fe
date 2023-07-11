@@ -22,7 +22,7 @@ export default function ProductDetail({ product }: any) {
       dispatch(
         setOpen({
           open: true,
-          message: "You must login to buy",
+          message: "Hãy đăng nhập để tiếp tục mua sắm",
           severity: "error",
         })
       );
