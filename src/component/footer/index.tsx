@@ -30,7 +30,7 @@ export default function Footer() {
           },
           "& .MuiTypography-root": {
             paddingBottom: "0.5rem",
-            fontSize: "1.3rem",
+            fontSize: "1rem",
             color: "white",
           },
           "& .MuiSvgIcon-root": {
