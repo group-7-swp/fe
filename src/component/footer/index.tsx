@@ -116,7 +116,7 @@ export default function Footer() {
         </Grid>
       </Container>
       <div style={{ marginTop: '1rem', borderTop: '1px solid white', textAlign : 'center', color : 'white' }}>
-        Copyright @ 2023
+        Copyright © 2023
       </div>
     </div>
   );
