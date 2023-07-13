@@ -16,7 +16,7 @@ export default function Footer() {
       style={{
         backgroundColor: setup.border,
         paddingTop: "3rem",
-        paddingBottom: "3.5rem",
+        paddingBottom: "0",
       }}
     >
       <Container
@@ -39,9 +39,9 @@ export default function Footer() {
           },
         }}
       >
-        <Grid container spacing={5} sx={{ marginLeft : '1px' }}>
+        <Grid container spacing={5} sx={{ marginLeft: '1px' }}>
           <Grid item xs={3.5} sx={{ marginLeft: '-5%', marginRight: '5%' }}>
-            <Typography 
+            <Typography
             >
               <img style={{ width: '20rem', height: '100%' }} src="assets/images/logo-white.png" alt="" />
             </Typography>
@@ -67,11 +67,11 @@ export default function Footer() {
             >
               CỬA HÀNG
             </Typography>
-            <Typography><Link href={`/`} style={{ color : 'white', textDecoration : 'none' }}>Cửa hàng</Link></Typography>
-            <Typography><Link href={`/`} style={{ color : 'white', textDecoration : 'none' }}>Sản phẩm</Link></Typography>
-            <Typography><Link href={`/`} style={{ color : 'white', textDecoration : 'none' }}>Tin tức</Link></Typography>
-            <Typography><Link href={`/`} style={{ color : 'white', textDecoration : 'none' }}>Liên hệ</Link></Typography>
-            <Typography><Link href={`/`} style={{ color : 'white', textDecoration : 'none' }}>Về Hommie</Link></Typography>
+            <Typography><Link href={`/`} style={{ color: 'white', textDecoration: 'none' }}>Cửa hàng</Link></Typography>
+            <Typography><Link href={`/`} style={{ color: 'white', textDecoration: 'none' }}>Sản phẩm</Link></Typography>
+            <Typography><Link href={`/`} style={{ color: 'white', textDecoration: 'none' }}>Tin tức</Link></Typography>
+            <Typography><Link href={`/`} style={{ color: 'white', textDecoration: 'none' }}>Liên hệ</Link></Typography>
+            <Typography><Link href={`/`} style={{ color: 'white', textDecoration: 'none' }}>Về Hommie</Link></Typography>
           </Grid>
           <Grid item xs={3}>
             <Typography
@@ -82,11 +82,11 @@ export default function Footer() {
             >
               CHÍNH SÁCH
             </Typography>
-            <Typography><Link href={`/`} style={{ color : 'white', textDecoration : 'none' }}>Chính sách bảo mật</Link></Typography>
-            <Typography><Link href={`/`} style={{ color : 'white', textDecoration : 'none' }}>Chính sách vận chuyển</Link></Typography>
-            <Typography><Link href={`/`} style={{ color : 'white', textDecoration : 'none' }}>Chính sách đổi trả</Link></Typography>
-            <Typography><Link href={`/`} style={{ color : 'white', textDecoration : 'none' }}>Chính sách thanh toán</Link></Typography>
-            <Typography><Link href={`/`} style={{ color : 'white', textDecoration : 'none' }}>Chính sách kiểm hàng</Link></Typography>
+            <Typography><Link href={`/`} style={{ color: 'white', textDecoration: 'none' }}>Chính sách bảo mật</Link></Typography>
+            <Typography><Link href={`/`} style={{ color: 'white', textDecoration: 'none' }}>Chính sách vận chuyển</Link></Typography>
+            <Typography><Link href={`/`} style={{ color: 'white', textDecoration: 'none' }}>Chính sách đổi trả</Link></Typography>
+            <Typography><Link href={`/`} style={{ color: 'white', textDecoration: 'none' }}>Chính sách thanh toán</Link></Typography>
+            <Typography><Link href={`/`} style={{ color: 'white', textDecoration: 'none' }}>Chính sách kiểm hàng</Link></Typography>
           </Grid>
           <Grid item xs={3}>
             <Typography
@@ -97,9 +97,9 @@ export default function Footer() {
             >
               THEO DÕI HOMMIE TẠI
             </Typography>
-            <YouTubeIcon sx={{ marginLeft: '4rem', color : 'red', marginBottom : '2.5px' }} />
-            <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="" style={{ width : '28px' }} />
-            <FacebookIcon sx={{ marginLeft: '0.5rem', color : 'blue', marginBottom : '1.8px' }} />
+            <YouTubeIcon sx={{ marginLeft: '4rem', color: 'red', marginBottom: '2.5px' }} />
+            <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="" style={{ width: '28px' }} />
+            <FacebookIcon sx={{ marginLeft: '0.5rem', color: 'blue', marginBottom: '1.8px' }} />
             <Typography
               variant="h6"
               sx={{
@@ -108,13 +108,16 @@ export default function Footer() {
             >
               ĐĂNG KÝ ĐỂ NHẬN TIN
             </Typography>
-            <div style={{ display : 'flex' }}> 
+            <div style={{ display: 'flex' }}>
               <TextField placeholder="Nhập địa chỉ email" sx={{ backgroundColor: 'white', width: '12rem' }} />
-              <Button sx={{ height : '3.4rem', backgroundColor : '#333333', textAlign : 'center', display : 'inline-block', paddingTop : '0.8rem' }}>Gửi</Button>
+              <Button sx={{ height: '3.4rem', backgroundColor: '#333333', textAlign: 'center', display: 'inline-block', paddingTop: '0.8rem' }}>Gửi</Button>
             </div>
           </Grid>
         </Grid>
       </Container>
+      <div style={{ marginTop: '1rem', borderTop: '1px solid white', textAlign : 'center', color : 'white' }}>
+        Copyright @ 2023
+      </div>
     </div>
   );
 }
